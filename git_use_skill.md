@@ -5,7 +5,9 @@
 ```git
 brew install git
 git --version
-which git
+
+brew link git --overwrite
+brew unlink &&  brew link git
 ```
 
 ### 权限设置
@@ -42,7 +44,13 @@ git push # 提交修改到远端仓库(提交到GitHub仓库中)
 #### 其他文件操作
 
 ```
+# 撤销 add
 git reset .
+
+# 删除文件
+rm <文件名>
+git rm <文件名>
+git commit -m 'delete'
 ```
 
 
