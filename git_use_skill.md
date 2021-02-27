@@ -39,7 +39,18 @@ git commit -m '备注修改的内容简介(可中文)'
 git status
 ## 以上相当于对本地仓库操作(不会传到github中)
 git push # 提交修改到远端仓库(提交到GitHub仓库中)
+
+## 命令合并
+git commit -m 'message' && git push
 ```
+
+#### 文件提交再修改
+
+```
+git commit --amend //追加提交，它可以在不增加一个新的commit-id的情况下将新修改的代码追加到前一次的commit-id中
+```
+
+
 
 #### 其他文件操作
 
