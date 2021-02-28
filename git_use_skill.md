@@ -29,6 +29,20 @@ git config --global configName configValue
 git config --global configName
 ```
 
+### 建立仓库
+
+ <kbd>git clone</kbd>同 <kbd>git init</kbd> 一样的作用,也是创建本地仓库,只不过  <kbd>git init</kbd>是直接将本地项目作为本地仓库,而<kbd>git clone</kbd> 是将远程项目克隆到本地并作为本地仓库.
+
+如果是使用 `git init` 命令初始化的本地项目,可能没有远程仓库,自然也就不需要推送.如果后来创建了远程仓库,那么你自然是想要将本地仓库推送到远程仓库的,因此你需要准确告诉 `git` 你要推送到哪个远程仓库.
+使用 `git remote add origin git@github.com:username/repos.git` 命令添加远程仓库信息,这样就建立了本地仓库和远程仓库的关联,以后就可以正常推送到远程仓库了
+
+```
+git clone <仓库地址> <本地目录>
+
+建立文件夹
+git init # 建立本地仓库
+```
+
 ### 提交文件
 
 ```
@@ -84,12 +98,6 @@ ssh-keygen -t rsa -C "your_email@youremail.com"
 
   
 
-### clone
-
-```
-git clone <仓库地址> <本地目录>
-```
-
 ### [分支(branch)](https://blog.csdn.net/return_cc/article/details/78321038)
 
 ```
@@ -97,7 +105,7 @@ git clone <仓库地址> <本地目录>
 git branch <branch_name>
 # 切换分支
 git checkout <branch_name>
-## 以上两条命令可合并为 git checkout-b <branch_name>
+## 以上两条命令可合并为 git checkout -b <branch_name>
 
 # 与远程分支关联 BowlingScore为仓库名
 git remote add origin https://github.com/yangxiaoyan20/BowlingScore.git
@@ -111,3 +119,12 @@ git merge submain
 # 删除submain分支
 git branch -d submain
 ```
+
+
+
+### 参考链接
+
+[本地和远程仓库本质](https://www.cnblogs.com/snowdreams1006/p/10597579.html)
+
+[Git本地仓库与GitHub远程仓库的同步方法](https://blog.csdn.net/lixiuxiu2017/article/details/79495884)
+
