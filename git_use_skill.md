@@ -139,7 +139,7 @@ git branch -d submain
 git diff HEAD
 ```
 
-### 给 git 命令起别名
+### 给 git 命令起别名(alias-别名)
 
 ``` 
 # git config --global alias.<handle> <command>
